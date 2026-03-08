@@ -1,1 +1,490 @@
-ok
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee Members</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7c, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            display: block;
+        }
+
+        .member-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .member-nickname {
+            font-size: 1rem;
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .member-phone {
+            font-size: 0.95rem;
+            color: #3498db;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 2px solid #3498db;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .member-phone:hover {
+            background-color: #3498db;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .members-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .members-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .member-card {
+                height: auto;
+            }
+            
+            .member-image {
+                height: 200px;
+                object-fit: contain;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .member-image {
+                height: 220px;
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="section-title">Committee Members</h1>
+        
+        <div class="members-grid">
+            <!-- Member 1 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Md Yousuf" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Md Yousuf</span>
+                    <span class="member-nickname">Idris Bhai</span>
+                    <a href="tel:01700000000" class="member-phone">01700000000</a>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Md Abdul Samad" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Md Abdul Samad</span>
+                    <span class="member-nickname">Samad Bhai</span>
+                    <a href="tel:01800000000" class="member-phone">01800000000</a>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Nazim Ud Dola" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Nazim Ud Dola</span>
+                    <span class="member-nickname">Nazim</span>
+                    <a href="tel:01900000000" class="member-phone">01900000000</a>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Atikur Rahman Jibon" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Atikur Rahman Jibon</span>
+                    <span class="member-nickname">Jibon</span>
+                    <a href="tel:01600000000" class="member-phone">01600000000</a>
+                </div>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Abdul Kalam" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Abdul Kalam</span>
+                    <span class="member-nickname">Kalam Bhai</span>
+                    <a href="tel:01711111111" class="member-phone">01711111111</a>
+                </div>
+            </div>
+
+            <!-- Member 6 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Habibur Rahman" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Habibur Rahman</span>
+                    <span class="member-nickname">Habib</span>
+                    <a href="tel:01811111111" class="member-phone">01811111111</a>
+                </div>
+            </div>
+
+            <!-- Member 7 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Rahim Uddin" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Rahim Uddin</span>
+                    <span class="member-nickname">Rahim</span>
+                    <a href="tel:01911111111" class="member-phone">01911111111</a>
+                </div>
+            </div>
+
+            <!-- Member 8 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Karim Ahmed" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Karim Ahmed</span>
+                    <span class="member-nickname">Karim</span>
+                    <a href="tel:01611111111" class="member-phone">01611111111</a>
+                </div>
+            </div>
+
+            <!-- Member 9 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Sayed Hossain" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Sayed Hossain</span>
+                    <span class="member-nickname">Sayed</span>
+                    <a href="tel:01722222222" class="member-phone">01722222222</a>
+                </div>
+            </div>
+
+            <!-- Member 10 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Mizanur Rahman" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Mizanur Rahman</span>
+                    <span class="member-nickname">Mizan</span>
+                    <a href="tel:01822222222" class="member-phone">01822222222</a>
+                </div>
+            </div>
+
+            <!-- Member 11 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Jahangir Alam" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Jahangir Alam</span>
+                    <span class="member-nickname">Jahangir</span>
+                    <a href="tel:01922222222" class="member-phone">01922222222</a>
+                </div>
+            </div>
+
+            <!-- Member 12 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Faruk Ahmed" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Faruk Ahmed</span>
+                    <span class="member-nickname">Faruk</span>
+                    <a href="tel:01622222222" class="member-phone">01622222222</a>
+                </div>
+            </div>
+
+            <!-- Member 13 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Salim Reza" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Salim Reza</span>
+                    <span class="member-nickname">Salim</span>
+                    <a href="tel:01733333333" class="member-phone">01733333333</a>
+                </div>
+            </div>
+
+            <!-- Member 14 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Touhidur Rahman" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Touhidur Rahman</span>
+                    <span class="member-nickname">Touhid</span>
+                    <a href="tel:01833333333" class="member-phone">01833333333</a>
+                </div>
+            </div>
+
+            <!-- Member 15 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Asaduzzaman" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Asaduzzaman</span>
+                    <span class="member-nickname">Asad</span>
+                    <a href="tel:01933333333" class="member-phone">01933333333</a>
+                </div>
+            </div>
+
+            <!-- Member 16 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Nurul Islam" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Nurul Islam</span>
+                    <span class="member-nickname">Nurul</span>
+                    <a href="tel:01633333333" class="member-phone">01633333333</a>
+                </div>
+            </div>
+
+            <!-- Member 17 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Shahidul Islam" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Shahidul Islam</span>
+                    <span class="member-nickname">Shahid</span>
+                    <a href="tel:01744444444" class="member-phone">01744444444</a>
+                </div>
+            </div>
+
+            <!-- Member 18 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Mominul Haque" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Mominul Haque</span>
+                    <span class="member-nickname">Momin</span>
+                    <a href="tel:01844444444" class="member-phone">01844444444</a>
+                </div>
+            </div>
+
+            <!-- Member 19 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Rashed Khan" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Rashed Khan</span>
+                    <span class="member-nickname">Rashed</span>
+                    <a href="tel:01944444444" class="member-phone">01944444444</a>
+                </div>
+            </div>
+
+            <!-- Member 20 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Zahid Hasan" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Zahid Hasan</span>
+                    <span class="member-nickname">Zahid</span>
+                    <a href="tel:01644444444" class="member-phone">01644444444</a>
+                </div>
+            </div>
+
+            <!-- Member 21 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Imran Hossain" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Imran Hossain</span>
+                    <span class="member-nickname">Imran</span>
+                    <a href="tel:01755555555" class="member-phone">01755555555</a>
+                </div>
+            </div>
+
+            <!-- Member 22 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Saiful Islam" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Saiful Islam</span>
+                    <span class="member-nickname">Saiful</span>
+                    <a href="tel:01855555555" class="member-phone">01855555555</a>
+                </div>
+            </div>
+
+            <!-- Member 23 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Rafiqul Islam" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Rafiqul Islam</span>
+                    <span class="member-nickname">Rafiq</span>
+                    <a href="tel:01955555555" class="member-phone">01955555555</a>
+                </div>
+            </div>
+
+            <!-- Member 24 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Biplob Kumar" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Biplob Kumar</span>
+                    <span class="member-nickname">Biplob</span>
+                    <a href="tel:01655555555" class="member-phone">01655555555</a>
+                </div>
+            </div>
+
+            <!-- Member 25 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Anisur Rahman" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Anisur Rahman</span>
+                    <span class="member-nickname">Anis</span>
+                    <a href="tel:01766666666" class="member-phone">01766666666</a>
+                </div>
+            </div>
+
+            <!-- Member 26 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Kamrul Hasan" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Kamrul Hasan</span>
+                    <span class="member-nickname">Kamrul</span>
+                    <a href="tel:01866666666" class="member-phone">01866666666</a>
+                </div>
+            </div>
+
+            <!-- Member 27 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Sarwar Hossain" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Sarwar Hossain</span>
+                    <span class="member-nickname">Sarwar</span>
+                    <a href="tel:01966666666" class="member-phone">01966666666</a>
+                </div>
+            </div>
+
+            <!-- Member 28 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Faisal Ahmed" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Faisal Ahmed</span>
+                    <span class="member-nickname">Faisal</span>
+                    <a href="tel:01666666666" class="member-phone">01666666666</a>
+                </div>
+            </div>
+
+            <!-- Member 29 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Tariqul Islam" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Tariqul Islam</span>
+                    <span class="member-nickname">Tariq</span>
+                    <a href="tel:01777777777" class="member-phone">01777777777</a>
+                </div>
+            </div>
+
+            <!-- Member 30 -->
+            <div class="member-card">
+                <img src="https://i.ibb.co.com/N6L1rRwk/My-Image.jpg" alt="Humayun Kabir" class="member-image">
+                <div class="member-info">
+                    <span class="member-name">Humayun Kabir</span>
+                    <span class="member-nickname">Humayun</span>
+                    <a href="tel:01877777777" class="member-phone">01877777777</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click functionality for cards
+        document.querySelectorAll('.member-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const phone = this.querySelector('.member-phone').href;
+                window.location.href = phone;
+            });
+        });
+    </script>
+</body>
+</html>
